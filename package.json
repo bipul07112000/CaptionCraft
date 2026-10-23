@@ -1,0 +1,8 @@
+{
+  "name": "captioncraft",
+  "version": "1.0.0",
+  "description": "Caption and hashtag generator from photos, keywords or ideas",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" }
+}

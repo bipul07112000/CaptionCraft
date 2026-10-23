@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CaptionCraft – Captions & Hashtags</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <h1>CaptionCraft</h1>
+  <p class="sub">Perfect captions and hashtags from a photo, a few keywords, or just an idea.</p>
+
+  <div class="tabs" id="tabs">
+    <button class="tab on" data-t="photo">📷 Photo</button>
+    <button class="tab" data-t="kw">🔎 Keywords</button>
+    <button class="tab" data-t="idea">💡 Describe</button>
+  </div>
+
+  <div class="card">
+    <div id="p-photo">
+      <div class="drop" id="drop">Drop a photo here or tap to upload<br><small>JPG, PNG, WebP</small></div>
+      <input type="file" id="file" accept="image/*" class="hide">
+      <label>Anything to add? (optional)</label>
+      <input type="text" id="photoNote" placeholder="e.g. trip to Darjeeling, with friends">
+    </div>
+    <div id="p-kw" class="hide">
+      <label>Keywords</label>
+      <input type="text" id="kw" placeholder="sunset, beach, travel, coffee">
+      <div class="chips" style="margin-top:10px" id="ideas"></div>
+    </div>
+    <div id="p-idea" class="hide">
+      <label>Describe your post</label>
+      <textarea id="idea" placeholder="Launching my new photography page this weekend…"></textarea>
+    </div>
+
+    <div class="row">
+      <div><label>Platform</label>
+        <select id="plat"><option>Instagram</option><option>Facebook</option><option>X (Twitter)</option><option>LinkedIn</option><option>Pinterest</option></select></div>
+      <div><label>Language</label>
+        <select id="lang"><option>English</option><option>Bengali</option><option>Hindi</option><option>Hinglish</option><option>Spanish</option></select></div>
+    </div>
+    <label>Tone</label>
+    <div class="chips" id="tones"></div>
+    <button class="go" id="go">✨ Generate</button>
+    <div class="note" id="status"></div>
+  </div>
+
+  <div id="out" class="hide">
+    <div class="card"><h2>Captions</h2><div id="caps"></div></div>
+    <div class="card"><h2>Hashtags <button class="cp" id="cpTags">Copy all</button></h2><div class="chips" id="tags"></div></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
